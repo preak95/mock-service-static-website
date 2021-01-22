@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install
+  install:
+    runtime-versions:
+        python: 3.8
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm run build 
+artifacts:
+  files:
+    - packaged-template.yml
